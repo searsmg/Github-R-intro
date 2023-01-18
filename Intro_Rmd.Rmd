@@ -1,0 +1,44 @@
+---
+title: "Intro to R and R Markdown"
+author: "Megan Sears"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r eval = T}
+knitr::opts_chunk$set(echo = TRUE)
+
+source('loadpckgs.R')
+
+```
+
+```{r eval = T}
+
+data('penguins')
+
+penguins
+
+class(penguins)
+str(penguins)
+
+class(penguins$species)
+str(penguins$species)
+
+```
+
+```{r}
+myList <- list("apple", 1993, FALSE, penguins)
+str(myList)
+
+list(myList, list("more stuff here", list("and more")))
+
+names(myList) <- c("fruit", "year", "logic", "data")
+names(myList)
+
+```
+
+```{r}
+
+
+```
+
